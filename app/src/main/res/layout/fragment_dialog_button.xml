@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DialogButtonFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+            <EditText
+                android:id="@+id/calendarTitle"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:autofillHints=""
+                android:background="@drawable/edit_input_border"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:background="#ffffff"
+                android:text="@string/title" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:contentDescription="@string/null_info"
+            android:scaleType="fitXY"
+            android:src="@mipmap/titlepaper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/titlepaper"
+            tools:srcCompat="@mipmap/titlepaper" />
+
+        <EditText
+            android:id="@+id/calendarContent"
+            android:layout_width="280dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints=""
+            android:background="@drawable/edit_input_border"
+            android:ems="10"
+            android:enabled="true"
+            android:gravity="top"
+            android:hint="@string/remind_content"
+            android:inputType="textMultiLine"
+            android:maxHeight="100dp"
+            android:maxLines="10"
+            android:minHeight="20dp"
+            android:minLines="8"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:selectAllOnFocus="true"
+            android:textColorHint="#95A1AA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FFFFFF"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:background="#1DC792"
+            android:text="@string/finish_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarContent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/calendarTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="52dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/ic_date_range_24px" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
